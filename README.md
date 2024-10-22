@@ -1,60 +1,79 @@
-Eligibility Rule Evaluation Engine
-This project implements a rule evaluation engine that determines user eligibility based on customizable rules. Users can input rules through a user interface, and the engine evaluates them against specified user attributes.
+# Rule Evaluation Engine
 
-Table of Contents
-Introduction
-Features
-Installation
-Usage
-Design Choices
-Dependencies
-Running the Application
-License
-Introduction
-The Eligibility Rule Evaluation Engine allows users to define rules in a logical format and evaluate them against user attributes such as age, department, salary, and experience. The engine supports complex expressions with nested parentheses and logical operators (AND, OR).
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Prerequisites](#prerequisites)
+4. [Dependencies](#dependencies)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Input Rules](#input-rules)
+8. [Design Choices](#design-choices)
+9. [Contributing](#contributing)
 
-Features
-User-friendly interface for rule input.
-Supports logical expressions with multiple conditions.
-Evaluates eligibility based on user-defined rules.
-Handles nested parentheses and operator precedence.
-Outputs eligibility results in real-time.
-Installation
-To set up the project, follow these steps:
+## Overview
+This project implements a 3-tier rule evaluation engine that allows users to input rules and check user's eligibility based on specified criteria. The engine evaluates logical conditions using AND and OR operators, supporting nested rule evaluations for complex decision-making scenarios.
 
-Clone the repository:
+## Features
+- User Interface to input rules
+- Evaluation of user eligibility based on defined rules
+- Support for logical operations: AND, OR
+- Nested rule evaluation
+- Supports combined rules
 
-bash
-Copy code
-git clone <your-repository-url>
-cd <your-project-directory>
-Install the required dependencies (using pip):
+## Prerequisites
+Before running the application, ensure you have the following installed:
+- Python 3.x
 
-bash
-Copy code
+## Dependencies
+To set up and run the application, the following dependencies are required:
+- Flask: A lightweight WSGI web application framework for Python.
+  
+You can install the required libraries using pip:
+
+```bash
 pip install -r requirements.txt
-Usage
-Start the application by running:
+```
 
-bash
-Copy code
+## Installation
+Follow these steps to set up the Rule Evaluation Engine on your local machine:
+
+- Clone the Repository: Clone the repository to your local machine using Git:
+
+```bash
+git clone https://github.com/saumya-singh13/rule-engine-app.git
+```
+- Navigate to the Project Directory: Change to the project directory:
+
+```bash
+cd rule-evaluation-engine
+```
+- Install Dependencies: Install the required dependencies listed in requirements.txt:
+
+```bash
+pip install -r requirements.txt
+```
+## Usage
+- Run the Application: Start the Flask web server by running:
+
+```bash
 python -m backend.app
-Access the user interface through your web browser. Input the rules and user attributes to see the eligibility evaluation.
+```
+## Input Rules:
 
-Design Choices
-The application uses a modular architecture with separate components for rule parsing, AST creation, and evaluation.
-The rules are parsed using regular expressions to identify operands and operators accurately.
-A tree structure is implemented to represent the logical rules and their relationships.
-Dependencies
-This project requires the following dependencies to be installed:
+- Enter your rules in the provided text input field. Ensure the rules follow the specified format (e.g., age > 30 AND department = 'Marketing').
+Input Attributes:
 
-Python 3.x
-Flask (for the web framework)
-Any additional libraries specified in requirements.txt.
-Running the Application
-To run the application, ensure you have the necessary dependencies installed. Start the application by executing:
+- Fill in the attributes (e.g., age, department, salary, experience) in the respective fields in JSON format.
+- Evaluate:
 
-bash
-Copy code
-python -m backend.app
-This command launches the web server, allowing you to interact with the rule evaluation engine through the user interface.
+- Click the Evaluate button to check eligibility based on the rules and attributes you provided. The results will be displayed on the screen.
+## Design Choices
+- Modular Design: The application follows a modular design pattern for better maintainability and ease of testing. Each component, including the rule parser, evaluator, and user interface, api is encapsulated and have a seperate file
+
+- Abstract Syntax Tree (AST): The use of an Abstract Syntax Tree for rule evaluation allows for efficient processing of complex logical expressions. This structure enables easy manipulation and evaluation of nested rules.
+
+- Flask Framework: The application leverages the Flask web framework due to its simplicity and flexibility, making it easy to set up a web server and handle user input.
+
+## Contributing
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to submit a pull request or open an issue.
