@@ -67,10 +67,8 @@ http://localhost:5000
 ## Input Rules:
 
 - Enter your rules in the provided text input field. Ensure the rules follow the specified format (e.g., age > 30 AND department = 'Marketing').
-Input Attributes:
 
-- Fill in the attributes (e.g., age, department, salary, experience) in the respective fields in JSON format.
-- Evaluate:
+- Fill in the attributes (e.g., age, department, salary, experience) in the respective fields in JSON format and the respective rule id to check it against.
 
 - Click the Evaluate button to check eligibility based on the rules and attributes you provided. The results will be displayed on the screen.
 ## Design Choices
