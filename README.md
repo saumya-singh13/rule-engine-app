@@ -46,7 +46,7 @@ git clone https://github.com/saumya-singh13/rule-engine-app.git
 - Navigate to the Project Directory: Change to the project directory:
 
 ```bash
-cd rule-evaluation-engine
+cd rule-engine-app
 ```
 - Install Dependencies: Install the required dependencies listed in requirements.txt:
 
