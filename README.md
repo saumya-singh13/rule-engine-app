@@ -53,11 +53,16 @@ cd rule-engine-app
 ```bash
 pip install -r requirements.txt
 ```
+
 ## Usage
 - Run the Application: Start the Flask web server by running:
 
 ```bash
 python -m backend.app
+```
+- Access the User Interface: Open your web browser and navigate to:
+```bash
+http://localhost:5000
 ```
 ## Input Rules:
 
